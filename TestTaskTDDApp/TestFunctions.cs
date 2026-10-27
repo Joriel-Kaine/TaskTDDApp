@@ -26,7 +26,7 @@ namespace TestTaskTDDApp
         [DataRow("pass#", false)]
         [DataRow("passabc#", true)]
 
-        public void IsValidPassword_SeveralTests (string password, bool expected)
+        public void IsValidPassword_SeveralTests (string? password, bool expected)
         {
             bool result = Functions.IsValidPassword(password);
             Assert.AreEqual(expected, result);
