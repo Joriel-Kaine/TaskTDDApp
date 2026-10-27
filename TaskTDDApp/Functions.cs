@@ -7,5 +7,9 @@ namespace TaskTDDApp
     public class Functions
     {
         // Funciones a implementar.
+        public static long CalculateFactorial (int n)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
