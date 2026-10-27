@@ -14,5 +14,10 @@ namespace TaskTDDApp
 
             return number * CalculateFactorial(number - 1);
         }
+
+        public static bool IsValidPassword (string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

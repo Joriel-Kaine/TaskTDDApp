@@ -17,5 +17,19 @@ namespace TestTaskTDDApp
             long result = Functions.CalculateFactorial(n);
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+
+        [DataRow("", false)]
+        [DataRow(null, false)]
+        [DataRow("password", false)]
+        [DataRow("pass#", false)]
+        [DataRow("passabc#", true)]
+
+        public void IsValidPassword_SeveralTests (string password, bool expected)
+        {
+            bool result = Functions.IsValidPassword(password);
+            Assert.AreEqual(expected, result);
+        }
     }
 }
