@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TaskTDDApp
 {
@@ -15,22 +16,11 @@ namespace TaskTDDApp
             return number * CalculateFactorial(number - 1);
         }
 
-        public static bool IsValidPassword (string? a)
+        public static bool IsValidPassword (string? password)
         {
-            if (string.IsNullOrEmpty(a))
-            {
-                return false;
-            }
-            if (a.Length < 8)
-            {
-                return false;
-            }
-            if (!a.Contains("#"))
-            {
-                return false;
-            }
-
-            return true;
+            return !string.IsNullOrEmpty(password) &&
+                   password.Length >= 8 &&
+                   password.Contains("#");
         }
     }
 }
